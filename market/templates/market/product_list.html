@@ -1,0 +1,11 @@
+{% extends 'market/base.html' %}
+
+{% block content %}
+    {% for product in products %}
+        <div class="product">
+            <h3><a href=""> {{ product.supplier}}'s  {{ product.product_type }}</a></h3>
+            <p> Quantity: {{ product.quantity}} </p>
+            <p> {{ product.published_date|linebreaksbr }} </p>
+        </div>
+    {% endfor %}
+{% endblock %}

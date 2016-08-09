@@ -1,0 +1,19 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>Antonio: The local food market place</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{% static 'market/style.css' %}">
+
+    </head>
+    <body>
+     <div class="page-header">
+            <h1><a href="/">Local Food Market</a></h1>
+     </div>
+       {% block content %}
+       {% endblock %}
+    </body>
+</html>
