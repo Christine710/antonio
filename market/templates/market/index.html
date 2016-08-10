@@ -3,7 +3,7 @@
 {% block content %}
     {% for product in products %}
         <div class="product">
-            <h3><a href=""> {{ product.supplier}}'s  {{ product.product_type }}</a></h3>
+            <a href="{% url 'market:detail' product.id %}"> <h3> {{ product.supplier}}'s  {{ product.product_type }}</h3> </a>
             <p> Quantity: {{ product.quantity}} </p>
             <p> {{ product.published_date|linebreaksbr }} </p>
         </div>

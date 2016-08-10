@@ -1,0 +1,12 @@
+{% extends 'market/base.html' %}
+
+{% block content %}
+    <div class="product">
+        <div class="date">
+            {{ product.published_date }}
+        </div>
+        <a href="{% url 'market:index' %}"> <h3>{{ product.supplier}}'s  {{ product.product_type }}</h3> </a>
+        <p> Quantity: {{ product.quantity}} </p>
+        <p> Product image: {{ product.product_image }}</p>
+    </div>
+{% endblock %}
