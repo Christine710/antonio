@@ -1,6 +1,14 @@
-from django.shortcuts import render
+from django.views import generic
 from .models import Product
 
-def product_list(request):
-    products = Product.objects.all()
-    return render(request, 'market/product_list.html', {'products': products})
+
+class IndexView(generic.ListView):
+    template_name = 'market/index.html'
+    context_object_name = 'products'
+
+    def get_queryset(self):
+        return Product.objects.all()
+
+class DetailView(generic.DetailView):
+    model = Product
+    template_name = 'market/detail.html'
