@@ -3,9 +3,8 @@ from django.views import generic
 from .models import Product
 from django.shortcuts import render
 
-
 def index(request):
-    return render(request, 'market/index.html')
+    return render(request, 'index.html')
 
 def market(request):
     return render(request, 'market/index.html')
